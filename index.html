@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TurnoFácil - Reserva de Turnos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Reserva - TurnoFácil</h1>
+        
+        <form id="formTurno">
+            <label for="usuario">Nombre del Cliente:</label>
+            <input type="text" id="usuario" required placeholder="Ej: Gustavo Pérez">
+
+            <label for="servicio">Servicio:</label>
+            <select id="servicio" required>
+                <option value="Consulta General">Consulta General</option>
+                <option value="Atención Especializada">Atención Especializada</option>
+                <option value="Soporte Técnico">Soporte Técnico</option>
+            </select>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" required>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" required>
+
+            <button type="submit">Reservar Turno</button>
+        </form>
+
+        <h2>Turnos Reservados</h2>
+        <ul id="listaTurnos"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
