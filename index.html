@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TurnoFácil - Reserva de Turnos</title>
+    <title>TurnoFácil - Sistema Integral de Reservas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Sistema de Reserva - TurnoFácil</h1>
+        <h1>Sistema de Gestión - TurnoFácil</h1>
         
         <form id="formTurno">
             <label for="usuario">Nombre del Cliente:</label>
             <input type="text" id="usuario" required placeholder="Ej: Gustavo Pérez">
+
+            <label for="email">Correo Electrónico (Notificaciones):</label>
+            <input type="email" id="email" required placeholder="cliente@email.com">
 
             <label for="servicio">Servicio:</label>
             <select id="servicio" required>
@@ -27,10 +30,11 @@
             <label for="hora">Hora:</label>
             <input type="time" id="hora" required>
 
-            <button type="submit">Reservar Turno</button>
+            <button type="submit">Confirmar Reserva</button>
         </form>
 
-        <h2>Turnos Reservados</h2>
+        <h2>Panel de Turnos Registrados</h2>
+        <input type="text" id="buscador" placeholder="Buscar por cliente o servicio..." style="margin-bottom: 10px;">
         <ul id="listaTurnos"></ul>
     </div>
 
